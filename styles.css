@@ -34,7 +34,14 @@ body {
     opacity: 0.4;
 }
 
-#add-colors-btn {
+.config {
+    width: 100%;
+    display: flex;
+    align-content: space-around;
+}
+
+
+.config button {
     align-items: flex-end;
     width: 100px;
     height: 100px;
@@ -46,6 +53,6 @@ body {
     transition: 0.5s;
 }
 
-#add-colors-btn:hover {
+.config button:hover {
     opacity: 0.4;
 }
