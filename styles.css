@@ -7,7 +7,7 @@ body {
     transition: 0.8s;
 }
 
-.main-container {
+.text-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
 }
 
 
-.main-container button {
+.text-container button {
     width: 300px;
     height: 300px;
     color: white;
@@ -25,4 +25,15 @@ body {
     opacity: 0.3;
     border-radius: 20%;
     
+}
+
+#add-colors {
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border: solid 1px grey;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 20%;
 }
