@@ -4,7 +4,7 @@ let interval = null;
 
 const setIntervalBtn = document.getElementById('set-interval-btn');
 let intervalActive = false;
-let intervalId; // Store the interval ID
+let intervalId; 
 
 const container = document.querySelector('button');
 container.addEventListener('click', () => {
