@@ -16,7 +16,7 @@ container.addEventListener('click', () => {
 function generateMove() {
     const color = getRandomColor();
     document.body.style.backgroundColor = color;   
-    const startBtm = document.getElementById('startBtn');
+    const startBtn = document.getElementById('startBtn');
     startBtn.innerHTML = getRandomLimb() + '\n' + (color.charAt(0).toUpperCase() + color.slice(1));
 }
 
@@ -52,8 +52,8 @@ setIntervalBtn.addEventListener('click', () => {
         clearInterval(intervalId); // Clear the interval using the stored ID
         setIntervalBtn.classList.remove("clicked");
         intervalActive = false;
-        const h1 = document.querySelector('h1');
-        h1.innerHTML = 'Click to Start';
+        // const startBtn = document.querySelector('startBtn');
+        startBtn.innerHTML = 'Click to Start';
         setIntervalBtn.innerHTML = "Automatic (5s)";
         // addColorBtn.style.visibility='visible';
     }
