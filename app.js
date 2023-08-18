@@ -21,39 +21,41 @@ function generateMove() {
 }
 
 function getRandomLimb () {
-    const limb = ["Left Arm", "Right Arm", "Left Leg", "Right Leg"];
+    const limb = ["Left Hand", "Right Hand", "Left Foot", "Right Foot"];
     return limb[Math.floor(Math.random() * 4)];
 }
 
 function getRandomColor() {
-    const color = ['red', 'blue', 'yellow', 'green']
+    const color = ['red', 'blue', 'yellow', 'green', 'purple', 'black', 'brown', 'pink', 'orange']
     return color[Math.floor(Math.random() * color.length)];
 }
 
-const addColorBtn = document.getElementById('add-colors-btn')
-addColorBtn.addEventListener('click', () => {
-    console.log("Add color button");
-})
+// const addColorBtn = document.getElementById('add-colors-btn')
+// addColorBtn.addEventListener('click', () => {
+//     console.log("Add color button");
+// })
 
 
 
 setIntervalBtn.addEventListener('click', () => {
     if (!intervalActive) {
         console.log("Interval Activated");
+        setIntervalBtn.classList.add("clicked");
         intervalId = setInterval(() => {
             generateMove();
-        }, 4000); // Corrected the placement of the interval duration
+        }, 5000); // Corrected the placement of the interval duration
         setIntervalBtn.innerHTML = "Stop"
         intervalActive = true;
-        addColorBtn.style.visibility='collapse';
+        // addColorBtn.style.visibility='collapse';
     } else {
         console.log("Interval Deactivated");
         clearInterval(intervalId); // Clear the interval using the stored ID
+        setIntervalBtn.classList.remove("clicked");
         intervalActive = false;
         const h1 = document.querySelector('h1');
         h1.innerHTML = 'Click to Start';
-        setIntervalBtn.innerHTML = "Automatic (4s)";
-        addColorBtn.style.visibility='visible';
+        setIntervalBtn.innerHTML = "Automatic (5s)";
+        // addColorBtn.style.visibility='visible';
     }
 });
 
