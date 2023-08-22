@@ -35,7 +35,7 @@ function getRandomColor() {
 setIntervalBtn.addEventListener('click', () => {
     if (!intervalActive) {
         console.log("Interval Activated");
-        playSound();
+        // playSound();
         setIntervalBtn.classList.add("clicked");
         generateMove();
 
