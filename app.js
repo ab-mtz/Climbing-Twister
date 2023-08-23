@@ -35,7 +35,6 @@ function getRandomColor() {
 setIntervalBtn.addEventListener('click', () => {
     if (!intervalActive) {
         console.log("Interval Activated");
-        // playSound();
         setIntervalBtn.classList.add("clicked");
         generateMove();
 
@@ -57,7 +56,6 @@ setIntervalBtn.addEventListener('click', () => {
 });
 
 function playSound() {
-
     const snd = new Audio("interface-124464.mp3");  
     snd.play();
 }
